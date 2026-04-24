@@ -1,129 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Watch Store - Product</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ChronoHub-Product Details</title>
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Bootstrap Icons -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
 </head>
 
 <body>
 
-<!-- 🔷 NAVBAR -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
-        <a class="navbar-brand" href="index.html">WatchStore</a>
-
-        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navMenu">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navMenu">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="shop.html">Shop</a></li>
-                <li class="nav-item"><a class="nav-link active" href="#">Product</a></li>
-                <li class="nav-item"><a class="nav-link" href="cart.html">Cart</a></li>
-                <li class="nav-item"><a class="nav-link" href="checkout.html">Checkout</a></li>
-                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                <li class="nav-item"><a class="nav-link" href="adminDashboard.html">Admin</a></li>
-            </ul>
-        </div>
-    </div>
-</nav>
-
-<!-- 🔷 PRODUCT SECTION -->
 <div class="container mt-5">
-    <div class="row">
 
-        <!-- Image -->
-        <div class="col-md-6">
-            <img src="https://via.placeholder.com/500" class="img-fluid">
-        </div>
+<div class="row g-4">
 
-        <!-- Details -->
-        <div class="col-md-6">
-            <h2>Classic Watch</h2>
-            <h4 class="text-success">$120</h4>
-
-            <p>This premium watch offers durability, style, and precision. Perfect for everyday use.</p>
-
-            <!-- Progress Bar (Stock Level) -->
-            <p>Stock Level</p>
-            <div class="progress mb-3">
-                <div class="progress-bar bg-success" style="width: 70%">70%</div>
-            </div>
-
-            <!-- Buttons -->
-            <button class="btn btn-dark me-2">Add to Cart</button>
-
-            <!-- Modal Button -->
-            <button class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#buyModal">
-                Buy Now
-            </button>
-        </div>
-
-    </div>
+<!-- IMAGE -->
+<div class="col-md-6">
+    <img id="img" class="img-fluid rounded shadow">
 </div>
 
-<!-- 🔷 TABS -->
-<div class="container mt-5">
-    <ul class="nav nav-tabs">
-        <li class="nav-item">
-            <a class="nav-link active" data-bs-toggle="tab" href="#desc">Description</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="tab" href="#reviews">Reviews</a>
-        </li>
-    </ul>
+<!-- DETAILS -->
+<div class="col-md-6">
 
-    <div class="tab-content p-3 border">
-        <div class="tab-pane fade show active" id="desc">
-            <p>High-quality stainless steel watch with water resistance and long battery life.</p>
-        </div>
+    <h2 id="name" class="fw-bold"></h2>
 
-        <div class="tab-pane fade" id="reviews">
-            <p><i class="bi bi-star-fill text-warning"></i> Great product!</p>
-            <p><i class="bi bi-star-fill text-warning"></i> Worth the price.</p>
-        </div>
+    <p id="category" class="text-muted"></p>
+
+    <h4 id="price" class="text-success fw-bold"></h4>
+
+    <p id="desc" class="text-muted"></p>
+
+    <p class="mb-1">Stock</p>
+    <div class="progress mb-3">
+        <div id="stock" class="progress-bar bg-success"></div>
     </div>
+
+    <button class="btn btn-dark w-100 mb-2" onclick="addToCart()">
+        Add to Cart
+    </button>
+
 </div>
 
-<!-- 🔷 MODAL -->
-<div class="modal fade" id="buyModal">
-    <div class="modal-dialog">
-        <div class="modal-content">
-
-            <div class="modal-header">
-                <h5 class="modal-title">Confirm Purchase</h5>
-                <button class="btn-close" data-bs-dismiss="modal"></button>
-            </div>
-
-            <div class="modal-body">
-                Are you sure you want to buy this watch?
-            </div>
-
-            <div class="modal-footer">
-                <button class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                <button class="btn btn-success">Confirm</button>
-            </div>
-
-        </div>
-    </div>
+</div>
 </div>
 
-<!-- 🔷 FOOTER -->
-<footer class="bg-dark text-white text-center p-3 mt-5">
-    <p>&copy; 2026 WatchStore</p>
-</footer>
+<script>
 
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+const products = [
+    {
+        id: 1,
+        name: "Classic Luxury Watch",
+        price: 120,
+        img: "https://images.unsplash.com/photo-1524805444758-089113d48a6d",
+        desc: "Elegant stainless steel watch with premium design.",
+        category: "Luxury",
+        stock: 70
+    },
+    {
+        id: 2,
+        name: "Sport Watch",
+        price: 90,
+        img: "sportswatch.jpg",
+        desc: "Shock resistant watch for sports use.",
+        category: "Sports",
+        stock: 60
+    },
+    {
+        id: 3,
+        name: "Digital Watch",
+        price: 60,
+        img: "https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1",
+        desc: "Modern LED digital watch.",
+        category: "Digital",
+        stock: 80
+    },
+    {
+        id: 4,
+        name: "Luxury Gold Watch",
+        price: 200,
+        img: "https://images.unsplash.com/photo-1547996160-81dfa63595aa",
+        desc: "Premium gold plated luxury watch.",
+        category: "Luxury",
+        stock: 40
+    }
+];
+
+function getCart() {
+    return JSON.parse(localStorage.getItem("cart")) || [];
+}
+
+function saveCart(cart) {
+    localStorage.setItem("cart", JSON.stringify(cart));
+}
+
+// GET PRODUCT
+const params = new URLSearchParams(window.location.search);
+const id = params.get("id");
+
+let product = products.find(p => p.id == id);
+
+if (!product) {
+    document.body.innerHTML = "<h2 class='text-center mt-5'>Product Not Found</h2>";
+}
+
+// DISPLAY PRODUCT
+document.getElementById("name").innerText = product.name;
+document.getElementById("price").innerText = "$" + product.price;
+document.getElementById("img").src = product.img;
+document.getElementById("desc").innerText = product.desc;
+document.getElementById("category").innerText = "Category: " + product.category;
+
+// STOCK
+document.getElementById("stock").style.width = product.stock + "%";
+document.getElementById("stock").innerText = product.stock + "%";
+
+// ADD TO CART (FIXED)
+function addToCart() {
+
+    let cart = getCart();
+
+    let existing = cart.find(item => item.name === product.name);
+
+    if (existing) {
+        existing.qty += 1;
+    } else {
+        cart.push({
+            name: product.name,
+            price: product.price,
+            image: product.img,
+            qty: 1
+        });
+    }
+
+    saveCart(cart);
+
+    alert("Added to cart");
+}
+
+</script>
 
 </body>
 </html>

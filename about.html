@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Watch Store - About</title>
+<title>ChronoHub-About</title>
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
@@ -88,9 +88,12 @@ body {
 <body>
 
 <!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
 <div class="container">
-    <a class="navbar-brand" href="index.html">WatchStore</a>
+
+    <a class="navbar-brand fw-bold" href="index.html">
+        ChronoHub
+    </a>
 
     <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navMenu">
         <span class="navbar-toggler-icon"></span>
@@ -98,101 +101,119 @@ body {
 
     <div class="collapse navbar-collapse" id="navMenu">
         <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="shop.html">Shop</a></li>
-            <li class="nav-item"><a class="nav-link" href="cart.html">Cart</a></li>
-            <li class="nav-item"><a class="nav-link" href="checkout.html">Checkout</a></li>
-            <li class="nav-item"><a class="nav-link active" href="#">About</a></li>
-            <li class="nav-item"><a class="nav-link" href="adminDashboard.html">Admin</a></li>
+
+            <li class="nav-item">
+                <a class="nav-link " href="index.html">HOME</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="shop.html">SHOP</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link " href="cart.html">
+                    CART <span id="cart-count" class="badge bg-danger">0</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="checkout.html">CHECKOUT</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link active" href="about.html">ABOUT</a>
+            </li>
+
         </ul>
     </div>
+
 </div>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
-    <h1 class="display-4 fw-bold">About WatchStore</h1>
-    <p class="lead">Precision. Style. Excellence.</p>
+<h1 class="display-4 fw-bold">Frontend eCommerce Project</h1>
+<p class="lead">Built with HTML, CSS, JavaScript & Bootstrap</p>
 </section>
 
-<!-- OUR STORY (LONG + PREMIUM BACKGROUND) -->
 <section class="container mt-5 text-center">
-    <div class="premium-box">
-        <h2 class="fw-bold mb-3">Our Story</h2>
-        <p>
-            WatchStore began with a simple idea — to create watches that combine elegance, durability, and modern design.
-            What started as a small passion project has now grown into a brand that represents trust and style.
-            We carefully design each watch with attention to detail, ensuring it reflects personality and luxury.
-            Our goal has always been to make premium watches accessible without compromising quality.
-            Every piece we create tells a story of craftsmanship, innovation, and dedication to excellence.
-        </p>
+
+    <h2 class="fw-bold mb-4">About This Project</h2>
+    <p class="text-muted">
+        This project demonstrates frontend development skills for real-world eCommerce interfaces.
+    </p>
+
+    <div class="row g-4">
+
+        <div class="col-md-4">
+            <div class="feature">
+                <i class="bi bi-code-slash icon text-primary"></i>
+                <h5>Frontend Development</h5>
+                <p>Built using HTML, CSS, JavaScript, and Bootstrap with responsive UI design.</p>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="feature">
+                <i class="bi bi-cart-check icon text-success"></i>
+                <h5>Cart System</h5>
+                <p>Fully functional cart using browser storage and dynamic updates.</p>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="feature">
+                <i class="bi bi-credit-card icon text-warning"></i>
+                <h5>Checkout Flow</h5>
+                <p>Complete checkout system with order summary and validation logic.</p>
+            </div>
+        </div>
+
     </div>
+
 </section>
 
-<!-- MISSION + GOAL (SAME BACKGROUND STYLE) -->
-<section class="container mt-5">
-<div class="row g-4 text-center">
 
-    <div class="col-md-6">
-        <div class="premium-box">
-            <h3 class="fw-bold">Our Mission</h3>
-            <p>
-                To deliver high-quality watches that combine luxury design with affordability and long-lasting performance.
-                We aim to provide customers with timepieces that not only tell time but also define personality,
-                confidence, and lifestyle. Our mission is to ensure every customer feels premium without paying premium prices.
-            </p>
-        </div>
-    </div>
-
-    <div class="col-md-6">
-        <div class="premium-box">
-            <h3 class="fw-bold">Our Goal</h3>
-            <p>
-                To become a globally trusted watch brand recognized for innovation, style, and precision.
-                We aim to expand internationally while maintaining quality and customer satisfaction as our top priority.
-                Our goal is to redefine modern watch shopping with trust and excellence.
-            </p>
-        </div>
-    </div>
-
-</div>
-</section>
 
 <!-- FEATURES -->
 <section class="container text-center py-5">
-    <h2 class="fw-bold mb-4">Why Our Watches Stand Out</h2>
+    <h2 class="fw-bold mb-4">Key Features of This Project</h2>
 
     <div class="row g-4">
 
         <div class="col-md-3">
             <div class="feature">
-                <i class="bi bi-droplet icon text-primary"></i>
-                <h5>Water Resistant</h5>
-                <p>Daily protection from water exposure.</p>
+                <!-- Responsive Design -->
+                <i class="bi bi-phone icon text-primary"></i>
+                <h5>Responsive Design</h5>
+                <p>Fully responsive layout for mobile, tablet, and desktop.</p>
             </div>
         </div>
 
         <div class="col-md-3">
             <div class="feature">
-                <i class="bi bi-shield-check icon text-success"></i>
-                <h5>Durability</h5>
-                <p>Strong materials built to last years.</p>
+                <!-- Clean UI/UX -->
+                <i class="bi bi-palette icon text-success"></i>
+                <h5>Clean UI/UX</h5>
+                <p>Modern interface focused on usability and clarity.</p>
             </div>
         </div>
 
         <div class="col-md-3">
             <div class="feature">
-                <i class="bi bi-lightning icon text-warning"></i>
-                <h5>Precision</h5>
-                <p>Accurate and reliable timekeeping.</p>
+                <!-- Dynamic Cart -->
+                <i class="bi bi-cart-plus icon text-warning"></i>
+                <h5>Dynamic Cart</h5>
+                <p>Cart updates instantly using JavaScript and localStorage.</p>
             </div>
         </div>
 
         <div class="col-md-3">
             <div class="feature">
-                <i class="bi bi-gem icon text-danger"></i>
-                <h5>Luxury Design</h5>
-                <p>Elegant look for every occasion.</p>
+                <!-- Interactive UI -->
+                <i class="bi bi-mouse icon text-danger"></i>
+                <h5>Interactive UI</h5>
+                <p>Hover effects, animations, and smooth user interactions.</p>
             </div>
         </div>
 
@@ -201,14 +222,14 @@ body {
 
 <!-- CONTACT -->
 <section class="text-center py-5">
-    <h2 class="fw-bold mb-3">Contact Us</h2>
+    <h2 class="fw-bold mb-3">Contact (Demo Section)</h2>
 
     <div class="contact-box">
         <form>
             <input type="text" class="form-control mb-2" placeholder="Your Name">
             <input type="email" class="form-control mb-2" placeholder="Your Email">
             <textarea class="form-control mb-3" rows="3" placeholder="Message"></textarea>
-            <button class="btn btn-dark w-100">Send Message</button>
+            <button type="button" class="btn btn-dark w-100" onclick="sendMessage()">Send Message</button>
         </form>
 
         <hr>
@@ -224,10 +245,29 @@ body {
 
 <!-- FOOTER -->
 <footer class="bg-dark text-white text-center p-3">
-    <p>&copy; 2026 WatchStore</p>
+    <p>&copy; © 2026 ChronoHub</p>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+
+function getCart() {
+    return JSON.parse(localStorage.getItem("cart")) || [];
+}
+
+function updateCartCount() {
+    let count = document.getElementById("cart-count");
+    if (count) count.innerText = getCart().length;
+}
+
+function sendMessage() {
+    alert("Message sent (demo)");
+}
+
+updateCartCount();
+
+</script>
 
 </body>
 </html>
