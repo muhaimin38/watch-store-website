@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Watch Store - Home</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+<style>
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f5f6fa;
+}
+
+/* HERO CAROUSEL */
+.carousel-img {
+    height: 500px;
+    object-fit: cover;
+}
+
+.carousel-caption {
+    background: rgba(0,0,0,0.55);
+    padding: 20px;
+    border-radius: 12px;
+}
+
+/* CARDS */
+.card img {
+    height: 230px;
+    object-fit: cover;
+}
+
+.card {
+    border: none;
+    transition: 0.3s;
+    height: 100%;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* SECTION SPACING */
+section {
+    padding: 70px 0;
+}
+
+/* FEATURE SECTION BACKGROUND */
+.feature-section {
+    background: linear-gradient(135deg, #0f0f0f, #1f2c3a);
+    color: white;
+}
+
+/* FEATURE BOX */
+.feature-box {
+    padding: 25px;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.08);
+    transition: 0.3s;
+}
+
+.feature-box:hover {
+    transform: translateY(-10px);
+    background: rgba(255,255,255,0.15);
+}
+
+/* ICONS */
+.bi {
+    transition: 0.3s;
+}
+
+.bi:hover {
+    transform: scale(1.2);
+}
+
+/* BUTTON */
+.btn-light {
+    font-weight: 600;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<div class="container">
+    <a class="navbar-brand" href="#">WatchStore</a>
+
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="shop.html">Shop</a></li>
+            <li class="nav-item"><a class="nav-link" href="cart.html">Cart</a></li>
+            <li class="nav-item"><a class="nav-link" href="checkout.html">Checkout</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="adminDashboard.html">Admin</a></li>
+        </ul>
+    </div>
+</div>
+</nav>
+
+<!-- ALERT -->
+<div class="alert alert-warning text-center mb-0">
+     Limited Time Offer! Get 20% Off on All Watches!
+</div>
+
+<!-- CAROUSEL -->
+<div id="slider" class="carousel slide" data-bs-ride="carousel">
+
+<div class="carousel-inner">
+
+    <div class="carousel-item active">
+        <img src="nacar.jpg" class="d-block w-100 carousel-img">
+        <div class="carousel-caption">
+            <h1 class="display-3 fw-bold">Welcome to WatchStore</h1>
+            <p class="lead">Luxury watches that define your style</p>
+            <a href="shop.html" class="btn btn-light btn-lg">Shop Now</a>
+        </div>
+    </div>
+
+    <div class="carousel-item">
+        <img src="uboat.png" class="d-block w-100 carousel-img">
+        <div class="carousel-caption">
+            <h2>Modern Design</h2>
+            <p>Built for performance and elegance</p>
+        </div>
+    </div>
+
+    <div class="carousel-item">
+        <img src="elgin.jpg" class="d-block w-100 carousel-img">
+        <div class="carousel-caption">
+            <h2>Timeless Style</h2>
+            <p>Crafted with precision and care</p>
+        </div>
+    </div>
+
+</div>
+
+<button class="carousel-control-prev" data-bs-target="#slider" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+</button>
+
+<button class="carousel-control-next" data-bs-target="#slider" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+</button>
+
+</div>
+
+<!-- FEATURED -->
+<section class="container text-center">
+    <h2 class="fw-bold">Featured Watches</h2>
+    <p class="text-muted">Explore our premium collection of luxury timepieces</p>
+</section>
+
+<!-- CARDS -->
+<section class="container">
+<div class="row g-4">
+
+    <div class="col-md-4">
+        <div class="card text-center">
+            <img src="https://images.unsplash.com/photo-1524805444758-089113d48a6d" class="card-img-top">
+            <div class="card-body">
+                <h5>Classic Watch <span class="badge bg-success">New</span></h5>
+                <p>$120</p>
+                <a href="product.html" class="btn btn-dark">View</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card text-center">
+            <img src="sportswatch.jpg" class="card-img-top">
+            <div class="card-body">
+                <h5>Sport Watch</h5>
+                <p>$90</p>
+                <a href="product.html" class="btn btn-dark">View</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card text-center">
+            <img src="https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1" class="card-img-top">
+            <div class="card-body">
+                <h5>Digital Watch</h5>
+                <p>$60</p>
+                <a href="product.html" class="btn btn-dark">View</a>
+            </div>
+        </div>
+    </div>
+
+</div>
+</section>
+
+<!-- WHY CHOOSE US (IMPROVED BACKGROUND) -->
+<section class="feature-section text-center">
+<div class="container">
+
+    <h2 class="fw-bold mb-5">Why Choose Us?</h2>
+
+    <div class="row g-4">
+
+        <div class="col-md-4">
+            <div class="feature-box">
+                <i class="bi bi-star-fill fs-1 text-warning"></i>
+                <h5 class="mt-3">Premium Quality</h5>
+                <p>High-quality materials for long-lasting durability.</p>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="feature-box">
+                <i class="bi bi-truck fs-1 text-info"></i>
+                <h5 class="mt-3">Fast Delivery</h5>
+                <p>Quick and reliable shipping worldwide.</p>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="feature-box">
+                <i class="bi bi-shield-check fs-1 text-success"></i>
+                <h5 class="mt-3">Warranty</h5>
+                <p>2-year warranty on all products.</p>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-dark text-white text-center p-3">
+    <p>&copy; 2026 WatchStore | All Rights Reserved</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
